@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
-
+gem 'puma'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -17,8 +17,7 @@ group :development do
 end
 
 platforms :jruby do
-  gem 'jruby-openssl'
-  gem 'activerecord-jdbc-adapter'
+  gem 'activerecord-jdbcpostgresql-adapter', '~> 1.3', '>= 1.3.20'
   gem 'mondrian-olap', git: 'https://github.com/rsim/mondrian-olap.git'
-  gem 'pg', '0.17.1',  git: 'git://github.com/headius/jruby-pg.git', :branch => :master
+  gem 'pg', '0.17.1',  git: 'git://github.com/headius/jruby-pg.git', branch: :master
 end
